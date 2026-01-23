@@ -56,7 +56,7 @@ export default function Home() {
                   Book a Demo
                 </Link>
                 <Link
-                  href="https://raxtech.fillout.com/t/kosyn-waitlist"
+                  href="https://raxtech.fillout.com/kosyn-waitlist"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
