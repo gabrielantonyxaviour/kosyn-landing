@@ -18,6 +18,15 @@
     @apply bg-white text-black;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* RTL support for Arabic */
+  [dir="rtl"] body {
+    font-family: var(--font-noto-arabic), var(--font-inter), sans-serif;
+  }
+
+  [dir="ltr"] body {
+    font-family: var(--font-inter), sans-serif;
+  }
 }
 
 @layer utilities {
@@ -33,6 +42,25 @@
   /* Focus visible states */
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* RTL utilities */
+  .ltr\:space-x-3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [dir="ltr"] .ltr\:space-x-3 > * + * {
+    margin-left: 0.75rem;
+  }
+
+  .rtl\:space-x-reverse {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [dir="rtl"] .rtl\:space-x-reverse > * + * {
+    margin-right: 0.75rem;
   }
 }
 

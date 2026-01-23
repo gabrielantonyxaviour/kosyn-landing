@@ -1,18 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import GlitchText from "@/components/GlitchText";
 import SecureDataNetwork from "@/components/SecureDataNetwork";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { MovingBorderCard } from "@/components/ui/moving-border";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Home() {
+  const t = useTranslations();
   return (
     <main className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-black/10 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center ltr:space-x-3 rtl:space-x-reverse">
               <Image
                 src="/logo-text-right.png"
                 alt="KOSYN"
@@ -22,12 +25,15 @@ export default function Home() {
                 priority
               />
             </Link>
-            <Link
-              href="#book-demo"
-              className="uppercase tracking-widest text-sm font-semibold px-8 py-3 bg-black text-white hover:bg-black/90 transition-colors duration-300 border border-black focus-ring"
-            >
-              Book Demo
-            </Link>
+            <div className="flex items-center gap-3">
+              <LanguageSwitcher />
+              <Link
+                href="#book-demo"
+                className="uppercase tracking-widest text-sm font-semibold px-8 py-3 bg-black text-white hover:bg-black/90 transition-colors duration-300 border border-black focus-ring"
+              >
+                {t('nav.bookDemo')}
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -39,21 +45,21 @@ export default function Home() {
             {/* Left: Content */}
             <div>
               <h1 className="text-6xl md:text-8xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9]">
-                THE FUTURE
+                {t('hero.title1')}
                 <br />
-                OF MEDICAL
+                {t('hero.title2')}
                 <br />
                 <GlitchText />
               </h1>
               <p className="text-base md:text-lg mb-8 text-black/70 leading-relaxed uppercase">
-                "STATE OF THE ART" AI FOR DOCTORS. COMPLETE DATA SOVEREIGNTY FOR PATIENTS. POWERED BY ZERO-KNOWLEDGE TECHNOLOGY.
+                {t('hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="#book-demo"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-black text-white hover:bg-black/90 transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
                 >
-                  Book a Demo
+                  {t('hero.bookDemoButton')}
                 </Link>
                 <Link
                   href="https://raxtech.fillout.com/kosyn-waitlist"
@@ -61,7 +67,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
                 >
-                  Join Waitlist
+                  {t('hero.joinWaitlistButton')}
                 </Link>
               </div>
             </div>
@@ -80,36 +86,36 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
-                HEALTHCARE
+                {t('problem.heading1')}
                 <br />
-                HAS A
+                {t('problem.heading2')}
                 <br />
-                PROBLEM
+                {t('problem.heading3')}
               </h2>
             </div>
             <div className="space-y-8">
-              <div className="border-l-2 border-white/30 pl-6">
+              <div className="ltr:border-l-2 rtl:border-r-2 border-white/30 ltr:pl-6 rtl:pr-6">
                 <h3 className="text-xl uppercase tracking-wider font-semibold mb-3">
-                  DOCTORS ARE OVERWHELMED
+                  {t('problem.overwhelmed.title')}
                 </h3>
                 <p className="text-white/80 leading-relaxed uppercase">
-                  HOURS SPENT ON DOCUMENTATION, INSURANCE CLAIMS, AND ADMINISTRATIVE TASKS STEAL TIME FROM PATIENT CARE.
+                  {t('problem.overwhelmed.description')}
                 </p>
               </div>
-              <div className="border-l-2 border-white/30 pl-6">
+              <div className="ltr:border-l-2 rtl:border-r-2 border-white/30 ltr:pl-6 rtl:pr-6">
                 <h3 className="text-xl uppercase tracking-wider font-semibold mb-3">
-                  PATIENT DATA IS VULNERABLE
+                  {t('problem.vulnerable.title')}
                 </h3>
                 <p className="text-white/80 leading-relaxed uppercase">
-                  CENTRALIZED SERVERS ARE PRIME TARGETS FOR HACKERS. ONE BREACH EXPOSES THOUSANDS OF SENSITIVE HEALTH RECORDS.
+                  {t('problem.vulnerable.description')}
                 </p>
               </div>
-              <div className="border-l-2 border-white/30 pl-6">
+              <div className="ltr:border-l-2 rtl:border-r-2 border-white/30 ltr:pl-6 rtl:pr-6">
                 <h3 className="text-xl uppercase tracking-wider font-semibold mb-3">
-                  TRUST IS BROKEN
+                  {t('problem.trust.title')}
                 </h3>
                 <p className="text-white/80 leading-relaxed uppercase">
-                  PATIENTS HAVE NO CONTROL OVER WHO ACCESSES THEIR DATA. HISTORICAL DIAGNOSES CAN'T BE VERIFIED OR PROVEN.
+                  {t('problem.trust.description')}
                 </p>
               </div>
             </div>
@@ -122,12 +128,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
-              POWERED BY
+              {t('features.heading1')}
               <br />
-              <span className="text-gray-500">ZK & AI</span>
+              <span className="text-gray-500">{t('features.heading2')}</span>
             </h2>
             <p className="text-lg text-black/70 max-w-2xl mx-auto uppercase">
-              ZERO-KNOWLEDGE LARGE LANGUAGE MODELS ENSURE EVERY CONVERSATION IS CRYPTOGRAPHICALLY PROVABLE
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -146,12 +152,12 @@ export default function Home() {
                 </CardItem>
                 <CardItem translateZ="50" className="w-full">
                   <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
-                    Zero-Knowledge Privacy
+                    {t('features.zkPrivacy.title')}
                   </h3>
                 </CardItem>
                 <CardItem translateZ="40" className="w-full">
                   <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
-                    PATIENT DATA ENCRYPTED LOCALLY. ONLY THE PATIENT HOLDS THE KEY.
+                    {t('features.zkPrivacy.description')}
                   </p>
                 </CardItem>
               </CardBody>
@@ -171,12 +177,12 @@ export default function Home() {
                 </CardItem>
                 <CardItem translateZ="50" className="w-full">
                   <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
-                    Embedded AI Assistant
+                    {t('features.aiAssistant.title')}
                   </h3>
                 </CardItem>
                 <CardItem translateZ="40" className="w-full">
                   <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
-                    AI THAT CONTROLS YOUR WORKFLOW AND LEARNS FROM YOUR PRACTICE.
+                    {t('features.aiAssistant.description')}
                   </p>
                 </CardItem>
               </CardBody>
@@ -196,12 +202,12 @@ export default function Home() {
                 </CardItem>
                 <CardItem translateZ="50" className="w-full">
                   <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
-                    Cryptographic Proof
+                    {t('features.cryptoProof.title')}
                   </h3>
                 </CardItem>
                 <CardItem translateZ="40" className="w-full">
                   <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
-                    VERIFIABLE PROOF OF EVERY DIAGNOSIS AND CONVERSATION.
+                    {t('features.cryptoProof.description')}
                   </p>
                 </CardItem>
               </CardBody>
@@ -223,12 +229,12 @@ export default function Home() {
                 </CardItem>
                 <CardItem translateZ="50" className="w-full">
                   <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
-                    Task Automation
+                    {t('features.automation.title')}
                   </h3>
                 </CardItem>
                 <CardItem translateZ="40" className="w-full">
                   <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
-                    AUTOMATIC SUMMARIES, CLAIMS, APPOINTMENTS <br/> & PRESCRIPTIONS.
+                    {t('features.automation.description')}
                   </p>
                 </CardItem>
               </CardBody>
@@ -247,12 +253,12 @@ export default function Home() {
                 </CardItem>
                 <CardItem translateZ="50" className="w-full">
                   <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
-                    Patient Data Control
+                    {t('features.patientControl.title')}
                   </h3>
                 </CardItem>
                 <CardItem translateZ="40" className="w-full">
                   <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
-                    PATIENTS DECIDE WHO SEES THEIR DATA <br/> WITH GRANULAR CONTROLS.
+                    {t('features.patientControl.description')}
                   </p>
                 </CardItem>
               </CardBody>
@@ -266,10 +272,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
-              HOW IT WORKS
+              {t('howItWorks.heading')}
             </h2>
             <p className="text-lg text-black/70 max-w-2xl mx-auto uppercase">
-              EXPERIENCE THE SEAMLESS WORKFLOW DESIGNED FOR MODERN HEALTHCARE PROFESSIONALS
+              {t('howItWorks.subtitle')}
             </p>
           </div>
 
@@ -283,10 +289,10 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
-                  SELECT PATIENT&nbsp;& VIEW COMPLETE CONTEXT
+                  {t('howItWorks.steps.step1.title')}
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  CLICK ON A PATIENT TO INSTANTLY SEE THEIR FULL MEDICAL HISTORY, ACTIVE INSURANCE COVERAGE, AND PREVIOUS CONSULTATIONS. ALL DATA IS ENCRYPTED AND ONLY ACCESSIBLE WITH PATIENT PERMISSION.
+                  {t('howItWorks.steps.step1.description')}
                 </p>
               </div>
             </div>
@@ -300,10 +306,10 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
-                  START RECORDING CONSULTATION
+                  {t('howItWorks.steps.step2.title')}
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  BEGIN YOUR CONSULTATION AND THE AI AUTOMATICALLY RECORDS AND PROCESSES EVERYTHING THROUGH ZKLLM. HAVE NATURAL CONVERSATIONS WHILE THE SYSTEM CAPTURES EVERY DETAIL.
+                  {t('howItWorks.steps.step2.description')}
                 </p>
               </div>
             </div>
@@ -317,10 +323,10 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
-                  AI GENERATES CRYPTOGRAPHIC SUMMARY
+                  {t('howItWorks.steps.step3.title')}
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  THE ZKLLM PROCESSES THE CONVERSATION AND CREATES A COMPREHENSIVE SUMMARY WITH KEY POINTS, DIAGNOSIS, AND TREATMENT RECOMMENDATIONS. THIS SUMMARY IS CRYPTOGRAPHICALLY SIGNED FOR FUTURE VERIFICATION.
+                  {t('howItWorks.steps.step3.description')}
                 </p>
               </div>
             </div>
@@ -334,10 +340,10 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
-                  EMBEDDED AI HANDLES THE REST
+                  {t('howItWorks.steps.step4.title')}
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  THE AI ASSISTANT DOESN'T JUST CHAT, IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE.
+                  {t('howItWorks.steps.step4.description')}
                 </p>
               </div>
             </div>
@@ -351,10 +357,10 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
-                  SHARE SECURELY WITH PATIENT
+                  {t('howItWorks.steps.step5.title')}
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  THE PATIENT RECEIVES THE CONSULTATION SUMMARY IN THEIR MOBILE APP. THEY CAN REVEAL THIS TO OTHER DOCTORS, USE IT FOR LEGAL PURPOSES, OR KEEP IT PRIVATE. THE CRYPTOGRAPHIC PROOF ENSURES AUTHENTICITY.
+                  {t('howItWorks.steps.step5.description')}
                 </p>
               </div>
             </div>
@@ -367,9 +373,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
-              BUILT FOR
+              {t('trust.heading1')}
               <br />
-              <span className="text-gray-500">TRUST&nbsp;& COMPLIANCE</span>
+              <span className="text-gray-500">{t('trust.heading2')}</span>
             </h2>
           </div>
 
@@ -386,10 +392,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               <div className="relative z-10">
                 <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
-                  Zero-Trust Architecture
+                  {t('trust.zeroTrust.title')}
                 </h3>
                 <p className="text-black/60 text-sm uppercase leading-relaxed">
-                  EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE
+                  {t('trust.zeroTrust.description')}
                 </p>
               </div>
             </div>
@@ -406,10 +412,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               <div className="relative z-10">
                 <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
-                  HIPAA STANDARD<br/>Ready
+                  {t('trust.hipaa.title')}
                 </h3>
                 <p className="text-black/60 text-sm uppercase leading-relaxed">
-                  DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)
+                  {t('trust.hipaa.description')}
                 </p>
               </div>
             </div>
@@ -426,10 +432,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               <div className="relative z-10">
                 <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
-                  GDPR <br/>Compliant
+                  {t('trust.gdpr.title')}
                 </h3>
                 <p className="text-black/60 text-sm uppercase leading-relaxed">
-                  FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY
+                  {t('trust.gdpr.description')}
                 </p>
               </div>
             </div>
@@ -446,10 +452,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               <div className="relative z-10">
                 <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
-                  Real-Time Encryption
+                  {t('trust.encryption.title')}
                 </h3>
                 <p className="text-black/60 text-sm uppercase leading-relaxed">
-                  ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS
+                  {t('trust.encryption.description')}
                 </p>
               </div>
             </div>
@@ -461,11 +467,12 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white scroll-mt-nav" id="book-demo">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
-            EXPERIENCE
-            THE FUTURE
+            {t('cta.heading1')}
+            <br />
+            {t('cta.heading2')}
           </h2>
           <p className="text-xl mb-8 text-white/80 uppercase">
-            BOOK A PERSONALIZED DEMO AND SEE HOW KOSYN CAN TRANSFORM YOUR PRACTICE
+            {t('cta.subtitle')}
           </p>
           <div className="space-y-4">
             <Link
@@ -474,10 +481,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-block uppercase tracking-widest text-sm font-semibold px-12 py-5 bg-white text-black hover:bg-white/90 transition-colors duration-300 border border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
-              Schedule Demo Call
+              {t('cta.button')}
             </Link>
             <p className="text-sm text-white/60 uppercase tracking-wider">
-              Pre-Launch&nbsp;• Limited Availability
+              {t('cta.availability')}
             </p>
           </div>
         </div>
@@ -496,45 +503,45 @@ export default function Home() {
                 className="h-16 w-auto mb-4"
               />
               <p className="text-sm text-black/60 uppercase">
-                ZERO-KNOWLEDGE AI FOR MODERN <br/> HEALTHCARE
+                {t('footer.tagline')}
               </p>
             </div>
             <div>
               <h4 className="uppercase tracking-wider font-bold mb-4 text-sm">
-                Product
+                {t('footer.product.title')}
               </h4>
               <ul className="space-y-2 text-sm text-black/60">
                 <li>
                   <Link href="#features" className="hover:text-black transition-colors focus-ring">
-                    FEATURES
+                    {t('footer.product.features')}
                   </Link>
                 </li>
                 <li>
                   <Link href="#how-it-works" className="hover:text-black transition-colors focus-ring">
-                    HOW IT WORKS
+                    {t('footer.product.howItWorks')}
                   </Link>
                 </li>
                 <li>
                   <Link href="#book-demo" className="hover:text-black transition-colors focus-ring">
-                    BOOK DEMO
+                    {t('footer.product.bookDemo')}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h4 className="uppercase tracking-wider font-bold mb-4 text-sm">
-                Company
+                {t('footer.company.title')}
               </h4>
               <ul className="space-y-2 text-sm text-black/60">
-                <li>ABOUT</li>
-                <li>PRIVACY POLICY</li>
-                <li>TERMS OF SERVICE</li>
+                <li>{t('footer.company.about')}</li>
+                <li>{t('footer.company.privacy')}</li>
+                <li>{t('footer.company.terms')}</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-black/10 pt-8 text-center text-sm text-black/60">
             <p className="uppercase tracking-wider">
-              ©&nbsp;2026 KOSYN. ALL RIGHTS RESERVED.
+              {t('footer.copyright')}
             </p>
           </div>
         </div>

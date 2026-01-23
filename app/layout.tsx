@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Bebas_Neue, Noto_Sans_Arabic } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
+import { languages, type Locale } from "@/i18n/config";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +15,14 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-bebas",
   weight: "400",
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  variable: "--font-noto-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -62,11 +73,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale() as Locale;
+  const messages = await getMessages();
+  const dir = languages[locale]?.dir || 'ltr';
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -120,7 +135,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} dir={dir} className="scroll-smooth">
       <head>
         <link rel="icon" href="/logo-no-text.png" />
         <link rel="preconnect" href="https://calendar.google.com" />
@@ -129,8 +144,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${bebasNeue.variable} font-sans antialiased`}>
-        {children}
+      <body className={`${inter.variable} ${bebasNeue.variable} ${notoSansArabic.variable} font-sans antialiased`}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

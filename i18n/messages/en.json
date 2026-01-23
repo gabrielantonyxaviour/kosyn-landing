@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "bookDemo": "Book Demo"
+  },
+  "hero": {
+    "title1": "THE FUTURE",
+    "title2": "OF MEDICAL",
+    "subtitle": "\"STATE OF THE ART\" AI FOR DOCTORS. COMPLETE DATA SOVEREIGNTY FOR PATIENTS. POWERED BY ZERO-KNOWLEDGE TECHNOLOGY.",
+    "bookDemoButton": "Book a Demo",
+    "joinWaitlistButton": "Join Waitlist"
+  },
+  "problem": {
+    "heading1": "HEALTHCARE",
+    "heading2": "HAS A",
+    "heading3": "PROBLEM",
+    "overwhelmed": {
+      "title": "DOCTORS ARE OVERWHELMED",
+      "description": "HOURS SPENT ON DOCUMENTATION, INSURANCE CLAIMS, AND ADMINISTRATIVE TASKS STEAL TIME FROM PATIENT CARE."
+    },
+    "vulnerable": {
+      "title": "PATIENT DATA IS VULNERABLE",
+      "description": "CENTRALIZED SERVERS ARE PRIME TARGETS FOR HACKERS. ONE BREACH EXPOSES THOUSANDS OF SENSITIVE HEALTH RECORDS."
+    },
+    "trust": {
+      "title": "TRUST IS BROKEN",
+      "description": "PATIENTS HAVE NO CONTROL OVER WHO ACCESSES THEIR DATA. HISTORICAL DIAGNOSES CAN'T BE VERIFIED OR PROVEN."
+    }
+  },
+  "features": {
+    "heading1": "POWERED BY",
+    "heading2": "ZK & AI",
+    "subtitle": "ZERO-KNOWLEDGE LARGE LANGUAGE MODELS ENSURE EVERY CONVERSATION IS CRYPTOGRAPHICALLY PROVABLE",
+    "zkPrivacy": {
+      "title": "Zero-Knowledge Privacy",
+      "description": "PATIENT DATA ENCRYPTED LOCALLY. ONLY THE PATIENT HOLDS THE KEY."
+    },
+    "aiAssistant": {
+      "title": "Embedded AI Assistant",
+      "description": "AI THAT CONTROLS YOUR WORKFLOW AND LEARNS FROM YOUR PRACTICE."
+    },
+    "cryptoProof": {
+      "title": "Cryptographic Proof",
+      "description": "VERIFIABLE PROOF OF EVERY DIAGNOSIS AND CONVERSATION."
+    },
+    "automation": {
+      "title": "Task Automation",
+      "description": "AUTOMATIC SUMMARIES, CLAIMS, APPOINTMENTS & PRESCRIPTIONS."
+    },
+    "patientControl": {
+      "title": "Patient Data Control",
+      "description": "PATIENTS DECIDE WHO SEES THEIR DATA WITH GRANULAR CONTROLS."
+    }
+  },
+  "howItWorks": {
+    "heading": "HOW IT WORKS",
+    "subtitle": "EXPERIENCE THE SEAMLESS WORKFLOW DESIGNED FOR MODERN HEALTHCARE PROFESSIONALS",
+    "steps": {
+      "step1": {
+        "title": "SELECT PATIENT & VIEW COMPLETE CONTEXT",
+        "description": "CLICK ON A PATIENT TO INSTANTLY SEE THEIR FULL MEDICAL HISTORY, ACTIVE INSURANCE COVERAGE, AND PREVIOUS CONSULTATIONS. ALL DATA IS ENCRYPTED AND ONLY ACCESSIBLE WITH PATIENT PERMISSION."
+      },
+      "step2": {
+        "title": "START RECORDING CONSULTATION",
+        "description": "BEGIN YOUR CONSULTATION AND THE AI AUTOMATICALLY RECORDS AND PROCESSES EVERYTHING THROUGH ZKLLM. HAVE NATURAL CONVERSATIONS WHILE THE SYSTEM CAPTURES EVERY DETAIL."
+      },
+      "step3": {
+        "title": "AI GENERATES CRYPTOGRAPHIC SUMMARY",
+        "description": "THE ZKLLM PROCESSES THE CONVERSATION AND CREATES A COMPREHENSIVE SUMMARY WITH KEY POINTS, DIAGNOSIS, AND TREATMENT RECOMMENDATIONS. THIS SUMMARY IS CRYPTOGRAPHICALLY SIGNED FOR FUTURE VERIFICATION."
+      },
+      "step4": {
+        "title": "EMBEDDED AI HANDLES THE REST",
+        "description": "THE AI ASSISTANT DOESN'T JUST CHAT, IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE."
+      },
+      "step5": {
+        "title": "SHARE SECURELY WITH PATIENT",
+        "description": "THE PATIENT RECEIVES THE CONSULTATION SUMMARY IN THEIR MOBILE APP. THEY CAN REVEAL THIS TO OTHER DOCTORS, USE IT FOR LEGAL PURPOSES, OR KEEP IT PRIVATE. THE CRYPTOGRAPHIC PROOF ENSURES AUTHENTICITY."
+      }
+    }
+  },
+  "trust": {
+    "heading1": "BUILT FOR",
+    "heading2": "TRUST & COMPLIANCE",
+    "zeroTrust": {
+      "title": "Zero-Trust Architecture",
+      "description": "EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE"
+    },
+    "hipaa": {
+      "title": "HIPAA STANDARD Ready",
+      "description": "DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)"
+    },
+    "gdpr": {
+      "title": "GDPR Compliant",
+      "description": "FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY"
+    },
+    "encryption": {
+      "title": "Real-Time Encryption",
+      "description": "ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS"
+    }
+  },
+  "cta": {
+    "heading1": "EXPERIENCE",
+    "heading2": "THE FUTURE",
+    "subtitle": "BOOK A PERSONALIZED DEMO AND SEE HOW KOSYN CAN TRANSFORM YOUR PRACTICE",
+    "button": "Schedule Demo Call",
+    "availability": "Pre-Launch • Limited Availability"
+  },
+  "footer": {
+    "tagline": "ZERO-KNOWLEDGE AI FOR MODERN HEALTHCARE",
+    "product": {
+      "title": "Product",
+      "features": "FEATURES",
+      "howItWorks": "HOW IT WORKS",
+      "bookDemo": "BOOK DEMO"
+    },
+    "company": {
+      "title": "Company",
+      "about": "ABOUT",
+      "privacy": "PRIVACY POLICY",
+      "terms": "TERMS OF SERVICE"
+    },
+    "copyright": "© 2026 KOSYN. ALL RIGHTS RESERVED."
+  }
+}
