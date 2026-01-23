@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import GlitchText from "@/components/GlitchText";
+import SecureDataNetwork from "@/components/SecureDataNetwork";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import { MovingBorderCard } from "@/components/ui/moving-border";
 
 export default function Home() {
   return (
@@ -61,18 +64,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Hero Video */}
+            {/* Right: Hero Animation */}
             <div className="hidden lg:block relative h-[600px]">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/hero-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <SecureDataNetwork />
             </div>
           </div>
         </div>
@@ -128,93 +122,139 @@ export default function Home() {
             <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
               POWERED BY
               <br />
-              <span className="text-gray-500">zkLLM TECHNOLOGY</span>
+              <span className="text-gray-500">ZK & AI</span>
             </h2>
             <p className="text-lg text-black/70 max-w-2xl mx-auto uppercase">
               ZERO-KNOWLEDGE LARGE LANGUAGE MODELS ENSURE EVERY CONVERSATION IS CRYPTOGRAPHICALLY PROVABLE
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Feature 1 */}
-            <div className="border border-black/10 p-8 hover:border-black/30 transition-colors duration-300">
-              <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
-                Zero-Knowledge Privacy
-              </h3>
-              <p className="text-black/70 leading-relaxed mb-4 uppercase">
-                PATIENT DATA IS STORED LOCALLY ON THEIR DEVICE AND ENCRYPTED IN THE CLOUD. ONLY THE PATIENT HOLDS THE DECRYPTION KEY.
-              </p>
-              <ul className="space-y-2 text-sm text-black/60 uppercase">
-                <li>• LOCAL-FIRST DATA STORAGE</li>
-                <li>• CLIENT-SIDE ENCRYPTION</li>
-                <li>• NO CENTRALIZED VULNERABILITY</li>
-              </ul>
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="border border-black/10 p-8 bg-white relative group/card w-full h-auto rounded-none">
+                <CardItem translateZ="60" className="w-full flex justify-center mb-6">
+                  <Image
+                    src="/zk.png"
+                    alt="Zero-Knowledge Privacy"
+                    width={200}
+                    height={200}
+                    className="w-48 h-48 object-contain"
+                  />
+                </CardItem>
+                <CardItem translateZ="50" className="w-full">
+                  <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
+                    Zero-Knowledge Privacy
+                  </h3>
+                </CardItem>
+                <CardItem translateZ="40" className="w-full">
+                  <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
+                    PATIENT DATA ENCRYPTED LOCALLY. ONLY THE PATIENT HOLDS THE KEY.
+                  </p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
 
             {/* Feature 2 */}
-            <div className="border border-black/10 p-8 hover:border-black/30 transition-colors duration-300">
-              <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
-                Embedded AI Assistant
-              </h3>
-              <p className="text-black/70 leading-relaxed mb-4 uppercase">
-                NOT JUST A CHATBOT—AN AI THAT ACTIVELY CONTROLS YOUR WORKFLOW, AUTO-UPDATES PRESCRIPTIONS, AND LEARNS FROM YOUR PRACTICE PATTERNS.
-              </p>
-              <ul className="space-y-2 text-sm text-black/60 uppercase">
-                <li>• REAL-TIME UI AUTOMATION</li>
-                <li>• MEDICAL LITERATURE TRAINED</li>
-                <li>• PERSONALIZED TO YOUR PRACTICE</li>
-              </ul>
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="border border-black/10 p-8 bg-white relative group/card w-full h-auto rounded-none">
+                <CardItem translateZ="60" className="w-full flex justify-center mb-6">
+                  <Image
+                    src="/ai.png"
+                    alt="Embedded AI Assistant"
+                    width={200}
+                    height={200}
+                    className="w-48 h-48 object-contain"
+                  />
+                </CardItem>
+                <CardItem translateZ="50" className="w-full">
+                  <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
+                    Embedded AI Assistant
+                  </h3>
+                </CardItem>
+                <CardItem translateZ="40" className="w-full">
+                  <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
+                    AI THAT CONTROLS YOUR WORKFLOW AND LEARNS FROM YOUR PRACTICE.
+                  </p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
 
             {/* Feature 3 */}
-            <div className="border border-black/10 p-8 hover:border-black/30 transition-colors duration-300">
-              <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
-                Cryptographic Proof
-              </h3>
-              <p className="text-black/70 leading-relaxed mb-4 uppercase">
-                EVERY DOCTOR-PATIENT CONVERSATION IS RECORDED AND PROCESSED BY ZKLLM, CREATING VERIFIABLE PROOF OF HISTORICAL DIAGNOSES.
-              </p>
-              <ul className="space-y-2 text-sm text-black/60 uppercase">
-                <li>• LEGAL PROTECTION</li>
-                <li>• AUDIT TRAILS</li>
-                <li>• VERIFIABLE MEDICAL HISTORY</li>
-              </ul>
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="border border-black/10 p-8 bg-white relative group/card w-full h-auto rounded-none">
+                <CardItem translateZ="60" className="w-full flex justify-center mb-6">
+                  <Image
+                    src="/cryptographic.png"
+                    alt="Cryptographic Proof"
+                    width={200}
+                    height={200}
+                    className="w-48 h-48 object-contain"
+                  />
+                </CardItem>
+                <CardItem translateZ="50" className="w-full">
+                  <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
+                    Cryptographic Proof
+                  </h3>
+                </CardItem>
+                <CardItem translateZ="40" className="w-full">
+                  <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
+                    VERIFIABLE PROOF OF EVERY DIAGNOSIS AND CONVERSATION.
+                  </p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
 
           {/* Additional Features Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-black/10 p-8">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-4">
-                Task Automation
-              </h3>
-              <p className="text-black/70 leading-relaxed mb-4 uppercase">
-                ELIMINATE TEDIOUS ADMINISTRATIVE WORK:
-              </p>
-              <ul className="space-y-2 text-black/60 uppercase">
-                <li>• AUTOMATIC CONSULTATION SUMMARIES</li>
-                <li>• INSURANCE CLAIM PROCESSING</li>
-                <li>• APPOINTMENT MANAGEMENT</li>
-                <li>• PRESCRIPTION GENERATION&nbsp;& TRACKING</li>
-                <li>• PATIENT FOLLOW-UP AUTOMATION</li>
-              </ul>
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="border border-black/10 p-8 bg-white relative group/card w-full h-auto rounded-none">
+                <CardItem translateZ="60" className="w-full flex justify-center mb-6">
+                  <Image
+                    src="/automation.png"
+                    alt="Task Automation"
+                    width={200}
+                    height={200}
+                    className="w-48 h-48 object-contain"
+                  />
+                </CardItem>
+                <CardItem translateZ="50" className="w-full">
+                  <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
+                    Task Automation
+                  </h3>
+                </CardItem>
+                <CardItem translateZ="40" className="w-full">
+                  <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
+                    AUTOMATIC SUMMARIES, CLAIMS, APPOINTMENTS <br/> & PRESCRIPTIONS.
+                  </p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
 
-            <div className="border border-black/10 p-8">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-4">
-                Patient Data Control
-              </h3>
-              <p className="text-black/70 leading-relaxed mb-4 uppercase">
-                PATIENTS DECIDE WHO SEES THEIR DATA:
-              </p>
-              <ul className="space-y-2 text-black/60 uppercase">
-                <li>• GRANULAR PERMISSION CONTROLS</li>
-                <li>• SECURE DOCTOR-PATIENT CHAT</li>
-                <li>• TRANSFERABLE HEALTH RECORDS</li>
-                <li>• MOBILE APP FOR PATIENTS</li>
-                <li>• REVEAL DATA ONLY WHEN NEEDED</li>
-              </ul>
-            </div>
+            <CardContainer className="w-full">
+              <CardBody className="border border-black/10 p-8 bg-white relative group/card w-full h-auto rounded-none">
+                <CardItem translateZ="60" className="w-full flex justify-center mb-6">
+                  <Image
+                    src="/patient.png"
+                    alt="Patient Data Control"
+                    width={200}
+                    height={200}
+                    className="w-48 h-48 object-contain"
+                  />
+                </CardItem>
+                <CardItem translateZ="50" className="w-full">
+                  <h3 className="text-xl uppercase tracking-wider font-bold mb-3 text-center">
+                    Patient Data Control
+                  </h3>
+                </CardItem>
+                <CardItem translateZ="40" className="w-full">
+                  <p className="text-black/60 text-sm leading-relaxed uppercase text-center">
+                    PATIENTS DECIDE WHO SEES THEIR DATA <br/> WITH GRANULAR CONTROLS.
+                  </p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
       </section>
@@ -231,87 +271,87 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-6">
             {/* Step 1 */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="group flex flex-col md:flex-row gap-8 items-start p-6 -mx-6 rounded-none border border-transparent hover:border-black transition-all duration-300 cursor-pointer">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black group-hover:bg-black group-hover:text-white">
                   <span className="text-2xl font-bold">01</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
+                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
                   SELECT PATIENT&nbsp;& VIEW COMPLETE CONTEXT
                 </h3>
-                <p className="text-black/70 leading-relaxed uppercase">
+                <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
                   CLICK ON A PATIENT TO INSTANTLY SEE THEIR FULL MEDICAL HISTORY, ACTIVE INSURANCE COVERAGE, AND PREVIOUS CONSULTATIONS. ALL DATA IS ENCRYPTED AND ONLY ACCESSIBLE WITH PATIENT PERMISSION.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="group flex flex-col md:flex-row gap-8 items-start p-6 -mx-6 rounded-none border border-transparent hover:border-black transition-all duration-300 cursor-pointer">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black group-hover:bg-black group-hover:text-white">
                   <span className="text-2xl font-bold">02</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
+                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
                   START RECORDING CONSULTATION
                 </h3>
-                <p className="text-black/70 leading-relaxed uppercase">
+                <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
                   BEGIN YOUR CONSULTATION AND THE AI AUTOMATICALLY RECORDS AND PROCESSES EVERYTHING THROUGH ZKLLM. HAVE NATURAL CONVERSATIONS WHILE THE SYSTEM CAPTURES EVERY DETAIL.
                 </p>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="group flex flex-col md:flex-row gap-8 items-start p-6 -mx-6 rounded-none border border-transparent hover:border-black transition-all duration-300 cursor-pointer">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black group-hover:bg-black group-hover:text-white">
                   <span className="text-2xl font-bold">03</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
+                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
                   AI GENERATES CRYPTOGRAPHIC SUMMARY
                 </h3>
-                <p className="text-black/70 leading-relaxed uppercase">
+                <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
                   THE ZKLLM PROCESSES THE CONVERSATION AND CREATES A COMPREHENSIVE SUMMARY WITH KEY POINTS, DIAGNOSIS, AND TREATMENT RECOMMENDATIONS. THIS SUMMARY IS CRYPTOGRAPHICALLY SIGNED FOR FUTURE VERIFICATION.
                 </p>
               </div>
             </div>
 
             {/* Step 4 */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="group flex flex-col md:flex-row gap-8 items-start p-6 -mx-6 rounded-none border border-transparent hover:border-black transition-all duration-300 cursor-pointer">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black group-hover:bg-black group-hover:text-white">
                   <span className="text-2xl font-bold">04</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
+                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
                   EMBEDDED AI HANDLES THE REST
                 </h3>
-                <p className="text-black/70 leading-relaxed uppercase">
+                <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
                   THE AI ASSISTANT DOESN'T JUST CHAT—IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE.
                 </p>
               </div>
             </div>
 
             {/* Step 5 */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="group flex flex-col md:flex-row gap-8 items-start p-6 -mx-6 rounded-none border border-transparent hover:border-black transition-all duration-300 cursor-pointer">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 border-2 border-black flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black group-hover:bg-black group-hover:text-white">
                   <span className="text-2xl font-bold">05</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4">
+                <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 transition-all duration-300 group-hover:text-black">
                   SHARE SECURELY WITH PATIENT
                 </h3>
-                <p className="text-black/70 leading-relaxed uppercase">
+                <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
                   THE PATIENT RECEIVES THE CONSULTATION SUMMARY IN THEIR MOBILE APP. THEY CAN REVEAL THIS TO OTHER DOCTORS, USE IT FOR LEGAL PURPOSES, OR KEEP IT PRIVATE. THE CRYPTOGRAPHIC PROOF ENSURES AUTHENTICITY.
                 </p>
               </div>
@@ -321,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* Trust & Security */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
@@ -331,51 +371,86 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-3">
-                Zero-Trust Architecture
-              </h3>
-              <p className="text-black/60 text-sm uppercase">
-                EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE
-              </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              className="relative text-center p-8 rounded-none border border-transparent hover:border-black transition-all duration-300 overflow-hidden group cursor-pointer"
+              style={{
+                backgroundImage: `radial-gradient(circle, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                backgroundPosition: '0 0, 10px 10px'
+              }}
+            >
+              <div className="absolute inset-0 bg-white opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="relative z-10">
+                <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
+                  Zero-Trust Architecture
+                </h3>
+                <p className="text-black/60 text-sm uppercase leading-relaxed">
+                  EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE
+                </p>
+              </div>
             </div>
 
-            <div className="text-center p-6">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-3">
-                HIPAA Ready
-              </h3>
-              <p className="text-black/60 text-sm uppercase">
-                DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)
-              </p>
+            <div
+              className="relative text-center p-8 rounded-none border border-transparent hover:border-black transition-all duration-300 overflow-hidden group cursor-pointer"
+              style={{
+                backgroundImage: `radial-gradient(circle, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                backgroundPosition: '0 0, 10px 10px'
+              }}
+            >
+              <div className="absolute inset-0 bg-white opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="relative z-10">
+                <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
+                  HIPAA STANDARD<br/>Ready
+                </h3>
+                <p className="text-black/60 text-sm uppercase leading-relaxed">
+                  DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)
+                </p>
+              </div>
             </div>
 
-            <div className="text-center p-6">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-3">
-                GDPR Compliant
-              </h3>
-              <p className="text-black/60 text-sm uppercase">
-                FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY
-              </p>
+            <div
+              className="relative text-center p-8 rounded-none border border-transparent hover:border-black transition-all duration-300 overflow-hidden group cursor-pointer"
+              style={{
+                backgroundImage: `radial-gradient(circle, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                backgroundPosition: '0 0, 10px 10px'
+              }}
+            >
+              <div className="absolute inset-0 bg-white opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="relative z-10">
+                <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
+                  GDPR <br/>Compliant
+                </h3>
+                <p className="text-black/60 text-sm uppercase leading-relaxed">
+                  FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY
+                </p>
+              </div>
             </div>
 
-            <div className="text-center p-6">
-              <h3 className="text-xl uppercase tracking-wider font-bold mb-3">
-                Real-Time Encryption
-              </h3>
-              <p className="text-black/60 text-sm uppercase">
-                ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS
-              </p>
+            <div
+              className="relative text-center p-8 rounded-none border border-transparent hover:border-black transition-all duration-300 overflow-hidden group cursor-pointer"
+              style={{
+                backgroundImage: `radial-gradient(circle, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px',
+                backgroundPosition: '0 0, 10px 10px'
+              }}
+            >
+              <div className="absolute inset-0 bg-white opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div className="relative z-10">
+                <h3 className="text-lg uppercase tracking-wider font-bold mb-3">
+                  Real-Time Encryption
+                </h3>
+                <p className="text-black/60 text-sm uppercase leading-relaxed">
+                  ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="mt-16 text-center border border-black/10 p-12">
-            <h3 className="text-2xl uppercase tracking-wider font-bold mb-4 text-balance">
-              TARGETING THE UNDERSERVED UAE&nbsp;& ARAB MARKET
-            </h3>
-            <p className="text-black/70 leading-relaxed max-w-3xl mx-auto uppercase">
-              WHILE GLOBAL COMPETITORS STRUGGLE WITH OUTDATED TECHNOLOGY, KOSYN IS PURPOSE-BUILT FOR THE MODERN HEALTHCARE LANDSCAPE WITH A FOCUS ON REGIONS THAT DEMAND THE HIGHEST STANDARDS OF PRIVACY AND INNOVATION.
-            </p>
           </div>
         </div>
       </section>
@@ -385,7 +460,6 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
             EXPERIENCE
-            <br />
             THE FUTURE
           </h2>
           <p className="text-xl mb-8 text-white/80 uppercase">
@@ -393,7 +467,7 @@ export default function Home() {
           </p>
           <div className="space-y-4">
             <Link
-              href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0VJQxoI0YKFxDwT8cQYvQYqYqYqY"
+              href="https://calendar.app.google/bH8d4V4nmDX5QuBMA"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block uppercase tracking-widest text-sm font-semibold px-12 py-5 bg-white text-black hover:bg-white/90 transition-colors duration-300 border border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
@@ -420,7 +494,7 @@ export default function Home() {
                 className="h-16 w-auto mb-4"
               />
               <p className="text-sm text-black/60 uppercase">
-                ZERO-KNOWLEDGE AI FOR MODERN HEALTHCARE
+                ZERO-KNOWLEDGE AI FOR MODERN <br/> HEALTHCARE
               </p>
             </div>
             <div>
