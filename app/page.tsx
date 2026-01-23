@@ -56,10 +56,12 @@ export default function Home() {
                   Book a Demo
                 </Link>
                 <Link
-                  href="#how-it-works"
+                  href="https://raxtech.fillout.com/t/kosyn-waitlist"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
                 >
-                  Learn More
+                  Join Waitlist
                 </Link>
               </div>
             </div>
@@ -335,7 +337,7 @@ export default function Home() {
                   EMBEDDED AI HANDLES THE REST
                 </h3>
                 <p className="text-black/70 leading-relaxed uppercase transition-all duration-300 group-hover:text-black/80">
-                  THE AI ASSISTANT DOESN'T JUST CHAT—IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE.
+                  THE AI ASSISTANT DOESN'T JUST CHAT, IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE.
                 </p>
               </div>
             </div>
