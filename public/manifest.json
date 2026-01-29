@@ -1,0 +1,21 @@
+{
+  "name": "KOSYN - Zero-Knowledge AI Medical Platform",
+  "short_name": "KOSYN",
+  "description": "Zero-knowledge AI medical platform for healthcare privacy and automation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/logo-no-text.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-no-text.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

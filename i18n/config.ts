@@ -2,7 +2,7 @@
 export const locales = ['en', 'ar'] as const;
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale: Locale = 'ar'; // Default to Arabic for Arab countries
+export const defaultLocale: Locale = 'en'; // Default to English
 
 // Language metadata
 export const languages: Record<Locale, {

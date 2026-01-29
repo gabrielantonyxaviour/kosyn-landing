@@ -1,13 +1,13 @@
 {
   "nav": {
-    "bookDemo": "Book Demo"
+    "getStarted": "Get Started"
   },
   "hero": {
     "title1": "THE FUTURE",
     "title2": "OF MEDICAL",
     "subtitle": "\"STATE OF THE ART\" AI FOR DOCTORS. COMPLETE DATA SOVEREIGNTY FOR PATIENTS. POWERED BY ZERO-KNOWLEDGE TECHNOLOGY.",
-    "bookDemoButton": "Book a Demo",
-    "joinWaitlistButton": "Join Waitlist"
+    "getStartedButton": "Get Started",
+    "signInButton": "Sign In"
   },
   "problem": {
     "heading1": "HEALTHCARE",
@@ -97,12 +97,55 @@
       "description": "ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS"
     }
   },
+  "pricing": {
+    "heading1": "PRICING",
+    "heading2": "",
+    "subtitle": "START FREE. UPGRADE WHEN YOU'RE READY FOR UNLIMITED AI POWER.",
+    "free": {
+      "title": "FREE",
+      "period": "FOREVER FREE",
+      "feature1": "REAL-TIME TRANSCRIPTION",
+      "feature2": "PATIENT MANAGEMENT",
+      "feature3": "3 AI SUMMARY GENERATIONS",
+      "feature4": "3 MEDICAL CODE GENERATIONS",
+      "feature5": "3 HELENA AI CONVERSATIONS",
+      "cta": "GET STARTED FREE"
+    },
+    "pro": {
+      "title": "PRO",
+      "badge": "MOST POPULAR",
+      "monthLabel": "MO",
+      "yearLabel": "YR",
+      "or": "OR",
+      "save": "SAVE",
+      "feature1": "EVERYTHING IN FREE",
+      "feature2": "UNLIMITED AI SUMMARIES",
+      "feature3": "UNLIMITED MEDICAL CODES",
+      "feature4": "UNLIMITED HELENA AI",
+      "feature5": "SOAP NOTE GENERATION",
+      "feature6": "DOCUMENT GENERATION",
+      "cta": "START PRO"
+    },
+    "monthly": "MONTHLY",
+    "yearly": "YEARLY",
+    "enterprise": {
+      "title": "ENTERPRISE",
+      "price": "CUSTOM",
+      "period": "FOR CLINICS & HOSPITALS",
+      "feature1": "EVERYTHING IN PRO",
+      "feature2": "CUSTOM INTEGRATIONS",
+      "feature3": "DEDICATED SUPPORT",
+      "feature4": "SLA GUARANTEES",
+      "feature5": "WHITE-LABEL OPTIONS",
+      "cta": "CONTACT US"
+    }
+  },
   "cta": {
     "heading1": "EXPERIENCE",
     "heading2": "THE FUTURE",
-    "subtitle": "BOOK A PERSONALIZED DEMO AND SEE HOW KOSYN CAN TRANSFORM YOUR PRACTICE",
-    "button": "Schedule Demo Call",
-    "availability": "Pre-Launch • Limited Availability"
+    "subtitle": "START FOR FREE AND SEE HOW KOSYN CAN TRANSFORM YOUR PRACTICE",
+    "button": "Start Free",
+    "availability": "FREE TIER AVAILABLE • NO CREDIT CARD REQUIRED"
   },
   "footer": {
     "tagline": "ZERO-KNOWLEDGE AI FOR MODERN HEALTHCARE",
@@ -110,7 +153,8 @@
       "title": "Product",
       "features": "FEATURES",
       "howItWorks": "HOW IT WORKS",
-      "bookDemo": "BOOK DEMO"
+      "getStarted": "GET STARTED",
+      "pricing": "PRICING"
     },
     "company": {
       "title": "Company",

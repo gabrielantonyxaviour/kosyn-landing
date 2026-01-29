@@ -32,7 +32,15 @@ export const metadata: Metadata = {
   authors: [{ name: "KOSYN" }],
   creator: "KOSYN",
   publisher: "KOSYN",
-  metadataBase: new URL("https://kosyn.app"), // Update with your actual domain
+  metadataBase: new URL("https://kosyn.app"),
+  alternates: {
+    canonical: "https://kosyn.app",
+    languages: {
+      "en": "https://kosyn.app",
+      "ar": "https://kosyn.app",
+      "x-default": "https://kosyn.app",
+    },
+  },
   openGraph: {
     title: "KOSYN - Zero-Knowledge AI Medical Platform",
     description: "Transform healthcare with cryptographically provable consultations and embedded AI assistance",
@@ -40,20 +48,21 @@ export const metadata: Metadata = {
     siteName: "KOSYN",
     images: [
       {
-        url: "/logo-text-right.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "KOSYN - Healthcare Privacy & AI",
+        alt: "KOSYN - Zero-Knowledge AI Medical Platform for Healthcare Privacy & Automation",
       },
     ],
     locale: "en_US",
+    alternateLocale: ["ar_SA"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "KOSYN - Zero-Knowledge AI Medical Platform",
     description: "Transform healthcare with cryptographically provable consultations and embedded AI assistance",
-    images: ["/logo-text-right.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -65,6 +74,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  other: {
+    "theme-color": "#ffffff",
   },
   verification: {
     // Add your verification codes here
@@ -137,7 +149,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir} className="scroll-smooth">
       <head>
-        <link rel="icon" href="/logo-no-text.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/logo-no-text.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="preconnect" href="https://calendar.google.com" />
         <script
           type="application/ld+json"

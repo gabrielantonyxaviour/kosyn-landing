@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reduce font sizes on smaller screens */
+@media (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 @layer base {
   :root {
     --background: #FFFFFF;

@@ -1,14 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { headers } from 'next/headers';
 import GlitchText from "@/components/GlitchText";
 import SecureDataNetwork from "@/components/SecureDataNetwork";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { MovingBorderCard } from "@/components/ui/moving-border";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import PricingSection from "@/components/PricingSection";
 
-export default function Home() {
-  const t = useTranslations();
+export default async function Home() {
+  const t = await getTranslations();
+  const headersList = await headers();
+  const country = headersList.get('x-vercel-ip-country') || headersList.get('cf-ipcountry') || '';
+  const isIndia = country === 'IN';
+  const currency = isIndia ? '₹' : '$';
+  const monthlyPrice = isIndia ? '1,500' : '15';
+  const yearlyPrice = isIndia ? '15,000' : '150';
+  const yearlySavings = isIndia ? '₹3,000' : '$30';
+
   return (
     <main className="min-h-screen">
       {/* Navigation */}
@@ -28,10 +38,10 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <LanguageSwitcher />
               <Link
-                href="#book-demo"
+                href="https://app.kosyn.ai/sign-up"
                 className="uppercase tracking-widest text-sm font-semibold px-8 py-3 bg-black text-white hover:bg-black/90 transition-colors duration-300 border border-black focus-ring"
               >
-                {t('nav.bookDemo')}
+                {t('nav.getStarted')}
               </Link>
             </div>
           </div>
@@ -56,18 +66,16 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="#book-demo"
+                  href="https://app.kosyn.ai/sign-up"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-black text-white hover:bg-black/90 transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
                 >
-                  {t('hero.bookDemoButton')}
+                  {t('hero.getStartedButton')}
                 </Link>
                 <Link
-                  href="https://raxtech.fillout.com/kosyn-waitlist"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://app.kosyn.ai/sign-in"
                   className="uppercase tracking-widest text-sm font-semibold px-10 py-4 bg-white text-black hover:bg-black hover:text-white transition-colors duration-300 border border-black w-full sm:w-auto focus-ring"
                 >
-                  {t('hero.joinWaitlistButton')}
+                  {t('hero.signInButton')}
                 </Link>
               </div>
             </div>
@@ -463,8 +471,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <PricingSection
+        currency={currency}
+        monthlyPrice={monthlyPrice}
+        yearlyPrice={yearlyPrice}
+        yearlySavings={yearlySavings}
+      />
+
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white scroll-mt-nav" id="book-demo">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white scroll-mt-nav" id="get-started">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
             {t('cta.heading1')}
@@ -476,9 +492,7 @@ export default function Home() {
           </p>
           <div className="space-y-4">
             <Link
-              href="https://calendar.app.google/bH8d4V4nmDX5QuBMA"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://app.kosyn.ai/sign-up"
               className="inline-block uppercase tracking-widest text-sm font-semibold px-12 py-5 bg-white text-black hover:bg-white/90 transition-colors duration-300 border border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               {t('cta.button')}
@@ -522,8 +536,13 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#book-demo" className="hover:text-black transition-colors focus-ring">
-                    {t('footer.product.bookDemo')}
+                  <Link href="#pricing" className="hover:text-black transition-colors focus-ring">
+                    {t('footer.product.pricing')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://app.kosyn.ai/sign-up" className="hover:text-black transition-colors focus-ring">
+                    {t('footer.product.getStarted')}
                   </Link>
                 </li>
               </ul>
