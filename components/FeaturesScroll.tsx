@@ -185,11 +185,6 @@ export default function FeaturesScroll() {
                   {t(`features.${feature.key}.description`)}
                 </p>
               </div>
-              <div className="flex items-center gap-2 text-black/40 group-hover:text-black transition-colors">
-                <span className="uppercase tracking-widest text-xs font-semibold">
-                  {t(`features.${feature.key}.tag`)}
-                </span>
-              </div>
             </div>
           </div>
         ))}
