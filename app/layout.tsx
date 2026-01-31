@@ -62,9 +62,9 @@ const notoSansArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "KOSYN - AI Medical Scribing & Document Generation | Engineering the Future of Healthcare",
-  description: "KOSYN provides AI-powered medical scribing, SOAP note generation, referral letters, discharge summaries, and medical coding for every specialty. Privacy-preserving, HIPAA ready.",
-  keywords: ["medical scribing AI", "healthcare AI", "SOAP notes", "medical coding", "referral letters", "discharge summaries", "HIPAA ready", "clinical automation", "healthcare technology", "AI for doctors"],
+  title: "KOSYN - AI That Handles Your Clinical Paperwork So You Can Focus on Patients",
+  description: "KOSYN automates medical scribing, note-taking, referral letters, discharge summaries, and medical coding — so doctors spend less time on paperwork and more time with patients. Built for every specialty, with privacy at the core.",
+  keywords: ["medical scribing", "AI for doctors", "clinical paperwork automation", "SOAP notes", "referral letters", "discharge summaries", "medical coding", "healthcare automation", "doctor productivity", "patient-first AI"],
   authors: [{ name: "KOSYN" }],
   creator: "KOSYN",
   publisher: "KOSYN",
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "KOSYN - AI Medical Scribing & Clinical Automation",
-    description: "AI-powered medical scribing, document generation, and clinical automation for every specialty.",
+    title: "KOSYN - AI That Handles Your Clinical Paperwork",
+    description: "Automates medical scribing, notes, letters, and coding — so doctors can focus on patients. Built for every specialty.",
     url: "https://kosyn.app",
     siteName: "KOSYN",
     images: [
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "KOSYN - AI Medical Scribing & Clinical Automation for Healthcare",
+        alt: "KOSYN - AI That Handles Your Clinical Paperwork So You Can Focus on Patients",
       },
     ],
     locale: "en_US",
@@ -96,8 +96,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KOSYN - AI Medical Scribing & Clinical Automation",
-    description: "AI-powered medical scribing, document generation, and clinical automation for every specialty.",
+    title: "KOSYN - AI That Handles Your Clinical Paperwork",
+    description: "Automates medical scribing, notes, letters, and coding — so doctors can focus on patients. Built for every specialty.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -142,7 +142,7 @@ export default async function RootLayout({
           '@type': 'ImageObject',
           url: 'https://kosyn.app/logo-text-right.png',
         },
-        description: 'AI-powered medical scribing and clinical automation platform for modern healthcare',
+        description: 'AI that handles clinical paperwork so doctors can focus on patients',
         foundingDate: '2026',
         contactPoint: {
           '@type': 'ContactPoint',
@@ -155,7 +155,7 @@ export default async function RootLayout({
         '@id': 'https://kosyn.app/#website',
         url: 'https://kosyn.app',
         name: 'KOSYN',
-        description: 'AI Medical Scribing & Clinical Automation for Healthcare',
+        description: 'AI that handles clinical paperwork so doctors can focus on patients',
         publisher: {
           '@id': 'https://kosyn.app/#organization',
         },
@@ -170,7 +170,7 @@ export default async function RootLayout({
           price: '0',
           priceCurrency: 'USD',
         },
-        description: 'AI-powered medical scribing, document generation, and clinical automation for doctors across all specialties',
+        description: 'Automates medical scribing, note-taking, referral letters, discharge summaries, and medical coding for doctors across all specialties',
         featureList: [
           'AI medical scribing',
           'SOAP note generation',
