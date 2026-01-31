@@ -1,54 +1,48 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const words = ['PRIVACY', 'RECORDS', 'AI SOLUTIONS'];
+const targetWord = 'HEALTHCARE';
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
 
 export default function GlitchText() {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayText, setDisplayText] = useState(words[0]);
+  const [displayText, setDisplayText] = useState('');
   const [isGlitching, setIsGlitching] = useState(false);
+  const hasRun = useRef(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsGlitching(true);
+    if (hasRun.current) return;
+    hasRun.current = true;
 
-      // Glitch animation
-      let iterations = 0;
-      const glitchInterval = setInterval(() => {
-        const nextIndex = (currentWordIndex + 1) % words.length;
-        const targetWord = words[nextIndex];
+    setIsGlitching(true);
+    let iterations = 0;
 
-        setDisplayText(
-          targetWord
-            .split('')
-            .map((char, index) => {
-              if (index < iterations) {
-                return targetWord[index];
-              }
-              return chars[Math.floor(Math.random() * chars.length)];
-            })
-            .join('')
-        );
+    const glitchInterval = setInterval(() => {
+      setDisplayText(
+        targetWord
+          .split('')
+          .map((char, index) => {
+            if (index < iterations) {
+              return targetWord[index];
+            }
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join('')
+      );
 
-        if (iterations >= targetWord.length) {
-          clearInterval(glitchInterval);
-          setIsGlitching(false);
-          setCurrentWordIndex(nextIndex);
-        }
+      if (iterations >= targetWord.length) {
+        clearInterval(glitchInterval);
+        setIsGlitching(false);
+      }
 
-        iterations += 1 / 3;
-      }, 50);
+      iterations += 1 / 3;
+    }, 50);
 
-      return () => clearInterval(glitchInterval);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [currentWordIndex]);
+    return () => clearInterval(glitchInterval);
+  }, []);
 
   return (
-    <span className={`text-gray-500 ${isGlitching ? 'glitch-active' : ''}`}>
+    <span className={isGlitching ? 'glitch-active' : ''}>
       {displayText}
     </span>
   );

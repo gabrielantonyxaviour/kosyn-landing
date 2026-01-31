@@ -24,10 +24,10 @@ export default function PricingSection({
     <section className="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-nav relative" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-display font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-outfit)] font-bold uppercase tracking-tight mb-6 leading-[0.9] text-balance">
             {t("pricing.heading1")}
             <br />
-            <span className="text-gray-500">{t("pricing.heading2")}</span>
+            <span className="text-neutral-500">{t("pricing.heading2")}</span>
           </h2>
           <p className="text-lg text-black/70 max-w-2xl mx-auto uppercase">
             {t("pricing.subtitle")}
@@ -38,7 +38,7 @@ export default function PricingSection({
           {/* Blurry Coming Soon Overlay */}
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="absolute inset-0 bg-white/60 backdrop-blur-md" />
-            <span className="relative z-20 text-4xl md:text-6xl font-display font-bold uppercase tracking-widest text-black/80">
+            <span className="relative z-20 text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-outfit)] font-bold uppercase tracking-widest text-black/80">
               Coming Soon
             </span>
           </div>

@@ -1,100 +1,99 @@
 {
   "nav": {
-    "getStarted": "Get Started"
+    "bookCall": "Book a Call"
   },
   "hero": {
-    "title1": "THE FUTURE",
-    "title2": "OF MEDICAL",
-    "subtitle": "\"STATE OF THE ART\" AI FOR DOCTORS. COMPLETE DATA SOVEREIGNTY FOR PATIENTS. POWERED BY ZERO-KNOWLEDGE TECHNOLOGY.",
-    "getStartedButton": "Get Started",
+    "title1": "ENGINEERING",
+    "title2": "THE FUTURE OF",
+    "subtitle": "AI-POWERED MULTI-SPECIALTY MEDICAL SCRIBING, DOCUMENT GENERATION, AND CLINICAL AUTOMATION WITH PRIVACY-FIRST DESIGN.",
+    "bookCallButton": "Book a Call",
     "signInButton": "Sign In"
   },
   "problem": {
     "heading1": "HEALTHCARE",
     "heading2": "HAS A",
     "heading3": "PROBLEM",
+    "videoPlaceholder": "DEMO VIDEO COMING SOON",
     "overwhelmed": {
       "title": "DOCTORS ARE OVERWHELMED",
-      "description": "HOURS SPENT ON DOCUMENTATION, INSURANCE CLAIMS, AND ADMINISTRATIVE TASKS STEAL TIME FROM PATIENT CARE."
+      "description": "HOURS SPENT ON DOCUMENTATION, REFERRAL LETTERS, AND ADMINISTRATIVE TASKS STEAL TIME FROM PATIENT CARE."
     },
     "vulnerable": {
-      "title": "PATIENT DATA IS VULNERABLE",
-      "description": "CENTRALIZED SERVERS ARE PRIME TARGETS FOR HACKERS. ONE BREACH EXPOSES THOUSANDS OF SENSITIVE HEALTH RECORDS."
+      "title": "PATIENT DATA IS AT RISK",
+      "description": "SENSITIVE MEDICAL RECORDS NEED STRONGER PROTECTION. BREACHES EXPOSE THOUSANDS OF PATIENTS OVERNIGHT."
     },
     "trust": {
-      "title": "TRUST IS BROKEN",
-      "description": "PATIENTS HAVE NO CONTROL OVER WHO ACCESSES THEIR DATA. HISTORICAL DIAGNOSES CAN'T BE VERIFIED OR PROVEN."
+      "title": "DOCUMENTATION IS BROKEN",
+      "description": "MANUAL MEDICAL CODING, HANDWRITTEN NOTES, AND FRAGMENTED WORKFLOWS LEAD TO ERRORS AND BURNOUT."
     }
   },
   "features": {
-    "heading1": "POWERED BY",
-    "heading2": "ZK & AI",
-    "subtitle": "ZERO-KNOWLEDGE LARGE LANGUAGE MODELS ENSURE EVERY CONVERSATION IS CRYPTOGRAPHICALLY PROVABLE",
-    "zkPrivacy": {
-      "title": "Zero-Knowledge Privacy",
-      "description": "PATIENT DATA ENCRYPTED LOCALLY. ONLY THE PATIENT HOLDS THE KEY."
+    "heading1": "WHAT",
+    "heading2": "KOSYN",
+    "heading3": " DOES",
+    "subtitle": "AI THAT HANDLES YOUR CLINICAL PAPERWORK SO YOU CAN FOCUS ON PATIENTS",
+    "scribing": {
+      "title": "AI Medical Scribing",
+      "description": "REAL-TIME TRANSCRIPTION OF CONSULTATIONS. JUST TALK TO YOUR PATIENT — KOSYN CAPTURES EVERY DETAIL AUTOMATICALLY.",
+      "tag": "CORE FEATURE"
     },
-    "aiAssistant": {
-      "title": "Embedded AI Assistant",
-      "description": "AI THAT CONTROLS YOUR WORKFLOW AND LEARNS FROM YOUR PRACTICE."
+    "soapNotes": {
+      "title": "SOAP Note Generation",
+      "description": "AUTOMATICALLY GENERATE STRUCTURED SOAP NOTES FROM YOUR CONSULTATIONS. REVIEW, EDIT, AND APPROVE IN SECONDS.",
+      "tag": "DOCUMENTATION"
     },
-    "cryptoProof": {
-      "title": "Cryptographic Proof",
-      "description": "VERIFIABLE PROOF OF EVERY DIAGNOSIS AND CONVERSATION."
+    "referralLetters": {
+      "title": "Referral Letters",
+      "description": "GENERATE PROFESSIONAL REFERRAL LETTERS WITH COMPLETE PATIENT CONTEXT. READY TO SEND TO SPECIALISTS INSTANTLY.",
+      "tag": "COMMUNICATION"
     },
-    "automation": {
-      "title": "Task Automation",
-      "description": "AUTOMATIC SUMMARIES, CLAIMS, APPOINTMENTS & PRESCRIPTIONS."
+    "dischargeLetters": {
+      "title": "Discharge Summaries",
+      "description": "CREATE COMPREHENSIVE DISCHARGE SUMMARIES WITH TREATMENT PLANS, MEDICATIONS, AND FOLLOW-UP INSTRUCTIONS.",
+      "tag": "DOCUMENTATION"
     },
-    "patientControl": {
-      "title": "Patient Data Control",
-      "description": "PATIENTS DECIDE WHO SEES THEIR DATA WITH GRANULAR CONTROLS."
+    "medicalCoding": {
+      "title": "Medical Coding",
+      "description": "AI-POWERED ICD-10 AND CPT CODE SUGGESTIONS BASED ON YOUR CONSULTATION. ACCURATE CODING, FEWER CLAIM DENIALS.",
+      "tag": "BILLING"
+    },
+    "multiSpecialty": {
+      "title": "Multi-Specialty Support",
+      "description": "BUILT FOR EVERY SPECIALTY — FROM CARDIOLOGY TO PEDIATRICS. KOSYN ADAPTS TO YOUR CLINICAL WORKFLOW.",
+      "tag": "ALL SPECIALTIES"
     }
   },
-  "howItWorks": {
-    "heading": "HOW IT WORKS",
-    "subtitle": "EXPERIENCE THE SEAMLESS WORKFLOW DESIGNED FOR MODERN HEALTHCARE PROFESSIONALS",
-    "steps": {
-      "step1": {
-        "title": "SELECT PATIENT & VIEW COMPLETE CONTEXT",
-        "description": "CLICK ON A PATIENT TO INSTANTLY SEE THEIR FULL MEDICAL HISTORY, ACTIVE INSURANCE COVERAGE, AND PREVIOUS CONSULTATIONS. ALL DATA IS ENCRYPTED AND ONLY ACCESSIBLE WITH PATIENT PERMISSION."
-      },
-      "step2": {
-        "title": "START RECORDING CONSULTATION",
-        "description": "BEGIN YOUR CONSULTATION AND THE AI AUTOMATICALLY RECORDS AND PROCESSES EVERYTHING THROUGH ZKLLM. HAVE NATURAL CONVERSATIONS WHILE THE SYSTEM CAPTURES EVERY DETAIL."
-      },
-      "step3": {
-        "title": "AI GENERATES CRYPTOGRAPHIC SUMMARY",
-        "description": "THE ZKLLM PROCESSES THE CONVERSATION AND CREATES A COMPREHENSIVE SUMMARY WITH KEY POINTS, DIAGNOSIS, AND TREATMENT RECOMMENDATIONS. THIS SUMMARY IS CRYPTOGRAPHICALLY SIGNED FOR FUTURE VERIFICATION."
-      },
-      "step4": {
-        "title": "EMBEDDED AI HANDLES THE REST",
-        "description": "THE AI ASSISTANT DOESN'T JUST CHAT, IT ACTIVELY UPDATES THE UI, GENERATES PRESCRIPTIONS, FILES INSURANCE CLAIMS, AND SCHEDULES FOLLOW-UPS. ALL YOU DO IS REVIEW AND APPROVE."
-      },
-      "step5": {
-        "title": "SHARE SECURELY WITH PATIENT",
-        "description": "THE PATIENT RECEIVES THE CONSULTATION SUMMARY IN THEIR MOBILE APP. THEY CAN REVEAL THIS TO OTHER DOCTORS, USE IT FOR LEGAL PURPOSES, OR KEEP IT PRIVATE. THE CRYPTOGRAPHIC PROOF ENSURES AUTHENTICITY."
-      }
-    }
+  "video": {
+    "heading1a": "SEE ",
+    "heading1b": "KOSYN",
+    "heading1c": " IN",
+    "heading2": "ACTION",
+    "subtitle": "WATCH HOW KOSYN TRANSFORMS YOUR CLINICAL WORKFLOW",
+    "placeholder": "DEMO VIDEO COMING SOON"
   },
   "trust": {
     "heading1": "BUILT FOR",
-    "heading2": "TRUST & COMPLIANCE",
-    "zeroTrust": {
-      "title": "Zero-Trust Architecture",
-      "description": "EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE"
+    "heading2": "PRIVACY",
+    "subtitle": "YOUR PATIENT DATA DESERVES THE HIGHEST STANDARD OF PROTECTION",
+    "zkPrivacy": {
+      "title": "Zero-Knowledge Privacy",
+      "description": "PATIENT DATA STORED LOCALLY AND ENCRYPTED. ONLY THE PATIENT HOLDS THE KEY."
     },
-    "hipaa": {
-      "title": "HIPAA STANDARD Ready",
-      "description": "DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)"
+    "embeddedAI": {
+      "title": "Embedded AI Assistant",
+      "description": "AN AI THAT CONTROLS YOUR WORKFLOW, AUTO-UPDATES PRESCRIPTIONS, AND LEARNS FROM YOUR PRACTICE."
     },
-    "gdpr": {
-      "title": "GDPR Compliant",
-      "description": "FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY"
+    "cryptoProof": {
+      "title": "Cryptographic Proof",
+      "description": "EVERY CONVERSATION PROCESSED BY ZKLLM, CREATING VERIFIABLE PROOF OF DIAGNOSES."
     },
-    "encryption": {
-      "title": "Real-Time Encryption",
-      "description": "ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS"
+    "taskAutomation": {
+      "title": "Task Automation",
+      "description": "AUTO-GENERATE SUMMARIES, PROCESS CLAIMS, MANAGE APPOINTMENTS, AND TRACK PRESCRIPTIONS."
+    },
+    "dataControl": {
+      "title": "Patient Data Control",
+      "description": "GRANULAR PERMISSIONS, SECURE CHAT, TRANSFERABLE RECORDS. PATIENTS OWN THEIR DATA."
     }
   },
   "pricing": {
@@ -140,21 +139,40 @@
       "cta": "CONTACT US"
     }
   },
+  "compliance": {
+    "heading1": "ENGINEERED FOR",
+    "heading2": "TRUST & COMPLIANCE",
+    "zeroTrust": {
+      "title": "Zero-Trust Architecture",
+      "description": "EVEN IF SERVERS ARE COMPROMISED, PATIENT DATA REMAINS ENCRYPTED AND INACCESSIBLE"
+    },
+    "hipaa": {
+      "title": "HIPAA Ready",
+      "description": "DESIGNED FOR COMPLIANCE WITH HEALTHCARE PRIVACY REGULATIONS (CERTIFICATION IN PROGRESS)"
+    },
+    "gdpr": {
+      "title": "GDPR Compliant",
+      "description": "FULL PATIENT DATA SOVEREIGNTY WITH RIGHT TO ERASURE AND PORTABILITY"
+    },
+    "encryption": {
+      "title": "Real-Time Encryption",
+      "description": "ALL COMMUNICATIONS ENCRYPTED END-TO-END WITH ZERO-KNOWLEDGE PROOFS"
+    }
+  },
   "cta": {
-    "heading1": "EXPERIENCE",
-    "heading2": "THE FUTURE",
-    "subtitle": "START FOR FREE AND SEE HOW KOSYN CAN TRANSFORM YOUR PRACTICE",
-    "button": "Start Free",
-    "availability": "FREE TIER AVAILABLE • NO CREDIT CARD REQUIRED"
+    "heading1": "READY TO",
+    "heading2": "TRANSFORM YOUR PRACTICE?",
+    "subtitle": "SEE HOW KOSYN CAN SAVE YOU HOURS EVERY DAY",
+    "button": "Book a Call",
+    "availability": "FREE DEMO • NO COMMITMENT REQUIRED"
   },
   "footer": {
-    "tagline": "ZERO-KNOWLEDGE AI FOR MODERN HEALTHCARE",
+    "tagline": "AI-POWERED CLINICAL AUTOMATION FOR MODERN HEALTHCARE",
     "product": {
       "title": "Product",
       "features": "FEATURES",
-      "howItWorks": "HOW IT WORKS",
-      "getStarted": "GET STARTED",
-      "pricing": "PRICING"
+      "pricing": "PRICING",
+      "bookCall": "BOOK A CALL"
     },
     "company": {
       "title": "Company",

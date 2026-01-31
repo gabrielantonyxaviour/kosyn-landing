@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bebas_Neue, Noto_Sans_Arabic } from "next/font/google";
+import { Inter, Bebas_Neue, Noto_Sans_Arabic, Space_Grotesk, Syne, Outfit, Plus_Jakarta_Sans, Oswald, Anton } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { languages, type Locale } from "@/i18n/config";
@@ -17,6 +17,42 @@ const bebasNeue = Bebas_Neue({
   weight: "400",
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["400", "700"],
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "700", "800"],
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["400", "700", "800", "900"],
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  weight: ["400", "700", "800"],
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  weight: ["400", "700"],
+});
+
+const anton = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  weight: "400",
+});
+
 const notoSansArabic = Noto_Sans_Arabic({
   variable: "--font-noto-arabic",
   subsets: ["arabic"],
@@ -26,9 +62,9 @@ const notoSansArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "KOSYN - Zero-Knowledge AI Medical Platform | Healthcare Privacy & Automation",
-  description: "KOSYN combines zkLLM technology with embedded AI to provide doctors with cryptographically provable consultations, automated workflows, and complete patient data sovereignty. Experience the future of private, secure healthcare.",
-  keywords: ["zkLLM", "healthcare AI", "medical privacy", "zero-knowledge proofs", "doctor AI assistant", "patient data sovereignty", "HIPAA compliant", "medical automation", "healthcare technology", "encrypted health records"],
+  title: "KOSYN - AI Medical Scribing & Document Generation | Engineering the Future of Healthcare",
+  description: "KOSYN provides AI-powered medical scribing, SOAP note generation, referral letters, discharge summaries, and medical coding for every specialty. Privacy-preserving, HIPAA ready.",
+  keywords: ["medical scribing AI", "healthcare AI", "SOAP notes", "medical coding", "referral letters", "discharge summaries", "HIPAA ready", "clinical automation", "healthcare technology", "AI for doctors"],
   authors: [{ name: "KOSYN" }],
   creator: "KOSYN",
   publisher: "KOSYN",
@@ -42,8 +78,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "KOSYN - Zero-Knowledge AI Medical Platform",
-    description: "Transform healthcare with cryptographically provable consultations and embedded AI assistance",
+    title: "KOSYN - AI Medical Scribing & Clinical Automation",
+    description: "AI-powered medical scribing, document generation, and clinical automation for every specialty.",
     url: "https://kosyn.app",
     siteName: "KOSYN",
     images: [
@@ -51,7 +87,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "KOSYN - Zero-Knowledge AI Medical Platform for Healthcare Privacy & Automation",
+        alt: "KOSYN - AI Medical Scribing & Clinical Automation for Healthcare",
       },
     ],
     locale: "en_US",
@@ -60,8 +96,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KOSYN - Zero-Knowledge AI Medical Platform",
-    description: "Transform healthcare with cryptographically provable consultations and embedded AI assistance",
+    title: "KOSYN - AI Medical Scribing & Clinical Automation",
+    description: "AI-powered medical scribing, document generation, and clinical automation for every specialty.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -106,7 +142,7 @@ export default async function RootLayout({
           '@type': 'ImageObject',
           url: 'https://kosyn.app/logo-text-right.png',
         },
-        description: 'Zero-knowledge AI medical platform providing cryptographically provable consultations and complete patient data sovereignty',
+        description: 'AI-powered medical scribing and clinical automation platform for modern healthcare',
         foundingDate: '2026',
         contactPoint: {
           '@type': 'ContactPoint',
@@ -119,7 +155,7 @@ export default async function RootLayout({
         '@id': 'https://kosyn.app/#website',
         url: 'https://kosyn.app',
         name: 'KOSYN',
-        description: 'Zero-Knowledge AI Medical Platform for Healthcare Privacy & Automation',
+        description: 'AI Medical Scribing & Clinical Automation for Healthcare',
         publisher: {
           '@id': 'https://kosyn.app/#organization',
         },
@@ -134,13 +170,13 @@ export default async function RootLayout({
           price: '0',
           priceCurrency: 'USD',
         },
-        description: 'zkLLM-powered medical platform with embedded AI assistant for doctors and complete data sovereignty for patients',
+        description: 'AI-powered medical scribing, document generation, and clinical automation for doctors across all specialties',
         featureList: [
-          'Zero-knowledge consultations',
-          'Cryptographic proof of diagnoses',
-          'Embedded AI assistant',
-          'Patient data sovereignty',
-          'Automated medical documentation',
+          'AI medical scribing',
+          'SOAP note generation',
+          'Referral and discharge letters',
+          'Medical coding (ICD-10, CPT)',
+          'Multi-specialty support',
         ],
       },
     ],
@@ -160,7 +196,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${bebasNeue.variable} ${notoSansArabic.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${bebasNeue.variable} ${notoSansArabic.variable} ${spaceGrotesk.variable} ${syne.variable} ${outfit.variable} ${plusJakarta.variable} ${oswald.variable} ${anton.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
